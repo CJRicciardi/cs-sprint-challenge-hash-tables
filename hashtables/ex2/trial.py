@@ -1,9 +1,17 @@
-#  Hint:  You may not need all of these.  Remove the unused functions.
-class Ticket:
-    def __init__(self, source, destination):
-        self.source = source
-        self.destination = destination
+from ex2 import Ticket
 
+ticket_1 = Ticket("NONE", "PDX")
+ticket_2 = Ticket("PDX", "DCA")
+ticket_3 = Ticket("DCA", "NONE")
+tickets = [ticket_1, ticket_2, ticket_3]
+
+# source / destination
+
+# dictionary = {}
+# for i in range(3):
+#     dictionary[tickets[i].source] = i
+
+# print(dictionary)
 
 def reconstruct_trip(tickets, length):
     """
@@ -33,3 +41,6 @@ def reconstruct_trip(tickets, length):
         route.append(source[route[i]])
 
     return route
+
+
+print(reconstruct_trip(tickets, 3))
